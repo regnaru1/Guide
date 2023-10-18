@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guida alla creazione di un sito web utilizzando il linguaggio HTML 5 e CSS 3">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!-- modifica stile -->
+    <style>
+        .board{
+            background-color: #e3d6d6;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+    </style>
+    <!--collegamento del file JS-->
+    <script src=""></script>
+    <!--impostazione del titolo e icona-->
+    <title>CSS 3 - Regole</title>
+    <link rel="website icon" type="png" href="../../images/icons/css.png">
+</head>
+<body>
+    <!--div contenente tutto il sito-->
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                    <a href="../html-pages/html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="./css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>CSS ver. 3</h1>
+            <div style="display: flex">
+                <progress value="40" max="100"></progress>
+            </div>
+            <h2>Le regole</h2>
+            <!-- progress bar -->
+            <p>
+                All'interno del CSS vengono utilizzate le <b>regole</b> per modificare le caratteristiche dei tag inseriti 
+                nel documento HTML. Ciascuna di queste regole è formata da quattro elementi fondamentali:
+            </p>
+            <div class="board" style="background-color: #e3d6d6; margin-bottom: 20px;">
+                <span style="color: rgb(255, 128, 0)">selettore</span>,
+                <span style="color: rgb(10, 184, 218)">proprietà</span>,
+                <span style="color: rgb(1, 145, 21)">valore della proprietà</span>e<span style="color: rgb(255, 0, 191)">dichiarazione</span>
+            </div>
+            <ul>
+                <li>
+                    Il <b>selettore</b> corrisponde all'elemento che si vuole modificare nel file HTML: 
+                    si possono utilizzare il selettore di elementi (nome del tag) oppure un altro selettore 
+                    (selettore ID o selettore CLASS, selettore padre-figlio, selettore fratelli adiacenti e 
+                    selettore di attributo);
+                </li>
+                <li>
+                    La <b>proprietà</b> indica la caratteristica che si vuole modificare (es. altezza, 
+                    larghezza, colore...);
+                </li>
+                <li>
+                    Il <b>valore della proprietà</b> indica come si vuole modificare la proprietà;
+                </li>
+                <li>
+                    La <b>dichiarazione</b> è l'insieme di proprietà e valore.
+                </li>
+            </ul>
+            <p>
+                Questi quattro elementi vengono disposti nella seguente maniera:
+            </p>
+            <div class="board">
+                <span style="color: rgb(255, 128, 0)">selettore</span>{
+                <br/>
+                <span style="color: rgb(10, 184, 218); margin-left: 10%">proprietà</span>:<span style="color: rgb(1, 145, 21)">valore della proprietà</span>
+                <br/>
+                <span style="color: rgb(255, 0, 191); margin-left: 25%">dichiarazione</span>
+                <br/>
+                }
+            </div>
+            <p>
+                Andando a sostituire agli elementi i corrispettivi della pagina HTML il risultato finale è il seguente:
+            </p>
+            <div class="board">
+                <span style="color: rgb(255, 128, 0)">h1</span>{
+                <br/>
+                <span style="color: rgb(10, 184, 218); margin-left: 10%">color:</span>:<span style="color: rgb(1, 145, 21)">#7700FF</span>
+                <br/>
+                <span style="color: rgb(10, 184, 218); margin-left: 10%">text-align:</span>:<span style="color: rgb(1, 145, 21)">#center</span>
+                <br/>
+                }
+            </div>
+            <p>
+                Per accedere a una lista completa di proprietà modificabili all'interno delle regole di CSS 3 cliccare <a style="text-decoration: underline" href="https://www.tutorialrepublic.com/css-reference/css3-properties.php" title="Lista di proprietà CSS 3" target="new">qui!</a>
+            </p>
+            <p class="esempio" style="width: 40%">
+                Attenzione! Il link rimanda a un sito esterno a questa guida.
+            </p>       
+        </div>
+        <!--bottoni navigazione-->
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../css-pages/css-page.html" title="Ritorna alla pagina precedente">&lt; Ritorna alla pagina precedente</a>
+            </div>
+            <div class="nav-button">
+                <a href="../css-pages/css-page-2.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div>
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>

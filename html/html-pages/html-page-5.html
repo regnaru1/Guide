@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina della guida dedicata a HTML ver. 5">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!--collegamento del file js-->
+    <!-- <script src=""></script> -->
+    <!--impostazione del titolo e icona-->
+    <title>HTML 5 - Liste e tabelle</title>
+    <link rel="website icon" type="png" href="../../images/icons/html.png">
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                <a href="./html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="../css-pages/css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>HTML ver. 5</h1>
+            <!-- progress bar -->
+            <div style="display: flex">
+                <progress value="75" max="100"></progress>
+            </div>
+            <h2>Le liste</h2>
+            <p>
+                All'interno di un documento HTML si possono inserire due tipi di lista: <b>la lista puntata</b> e <b>la lista numerata</b>.
+                Il funzionamento è lo stesso, l'unica differenza è il nome del tag da inserire.
+            </p>
+            <h3>
+                Le liste puntate
+            </h3>
+            <p>
+                La lista seguente è di tipo puntato
+            </p>
+            <ul>
+                <li>Roma</li>
+                <li>Milano</li>
+                <li>Napoli</li>
+            </ul>
+            <p>
+                E si realizza con il seguente codice
+            </p>
+            <div class="board" style="text-align: left">
+                <span class="open-tag">&ltul&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&ltli&gt</span>
+                Roma
+                <span class="close-tag" style="padding-left: 5%">&lt/li&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&ltli&gt</span>
+                Milano
+                <span class="close-tag" style="padding-left: 5%">&lt/li&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&ltli&gt</span>
+                Napoli
+                <span class="close-tag" style="padding-left: 5%">&lt/li&gt</span>
+                <br/>
+                <span class="open-tag">&lt/ul&gt</span>
+            </div>
+            <p>
+                Il tag<span>ul</span>delimita la lista definendone il tipo, puntata.
+                <br/>
+                Il tag<span>li</span>serve per racchiudere un'opzione, quindi ogni opzione della lista deve essere contenuta all'interno del tag<span>li</span>.
+            </p>
+            <h3>
+                Le liste numerate
+            </h3>
+            <p>
+                La lista seguente è di tipo numerato
+            </p>
+            <ol>
+                <li>Roma</li>
+                <li>Milano</li>
+                <li>Napoli</li>
+            </ol>
+            <p>
+                E si realizza con il seguente codice
+            </p>
+            <div class="board" style="text-align: left">
+                <span class="open-tag">&ltol&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&ltli&gt</span>
+                Roma
+                <span class="close-tag" style="padding-left: 5%">&lt/li&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&ltli&gt</span>
+                Milano
+                <span class="close-tag" style="padding-left: 5%">&lt/li&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&ltli&gt</span>
+                Napoli
+                <span class="close-tag" style="padding-left: 5%">&lt/li&gt</span>
+                <br/>
+                <span class="open-tag">&lt/ol&gt</span>
+            </div>
+            <p>
+                Il tag<span>ol</span>delimita la lista definendone il tipo, numerata.
+                <br/>
+                Il tag<span>li</span>serve per racchiudere un'opzione, quindi ogni opzione della lista deve essere contenuta all'interno del tag<span>li</span>.
+            </p>
+            <hr/>
+            <h2>Le tabelle</h2>
+            <p>
+                Inserire una tabella può essere utile per un migliore ordine di visualizzazione o per una questione di facilità di disposizione degli elementi, 
+                anche se questo metodo è gia ormai stato superato da tempo.
+                <br/>
+                Nel linguaggio HTML una tabella è delimitata dal tag richiudibile<span>table</span>.
+                <br/>
+                All'interno della tabella è poi necessario definire le <b>righe</b>, operazione che si esegue utilizzando il tag richiudibile<span>tr</span>.
+                <br/>
+                Successivamente, all'interno delle righe si definiscono le colonne, l'operazione viene fatta in due modi diversi a seconda che si tratti 
+                di una intestazione o di un semplice testo.
+                <br/>
+                Per le intestazioni delle colonne si utilizza il tag richiudibile<span>th</span>che rende automaticamente il testo grassetto e centrato all'interno della riga.                 
+                Per il semplice testo nelle colonne si utilizza il tag richiudibile<span>td</span>.
+            </p>
+            <p class="esempio">
+                Esempio di tabella a sei righe, quella di intestazione compresa, e tre righe.
+            </p>
+            <table>
+                <tr>
+                    <th>Nazione</th>
+                    <th>Capitale</th>
+                    <th>Popolazione</th>
+                </tr>
+                <tr>
+                    <td>Italia</td>
+                    <td>Roma</td>
+                    <td>61 261 254</td>
+                </tr>
+                <tr>
+                    <td>Spagna</td>
+                    <td>Madrid</td>
+                    <td>47 042 254</td>
+                </tr>
+                <tr>
+                    <td>Lituania</td>
+                    <td>Vilnius</td>
+                    <td>3 525 761</td>
+                </tr>
+                <tr>
+                    <td>Portogallo</td>
+                    <td>Lisbona</td>
+                    <td>10 781 459</td>
+                </tr>
+                <tr>
+                    <td>Irlanda</td>
+                    <td>Dublino</td>
+                    <td>4  722 028</td>
+                </tr>
+            </table>
+            <p class="esempio">
+                Il codice per realizzarla è il seguente:
+            </p>
+            <div class="board" style="text-align: left">
+                <span class="open-tag">&lttable&gt</span>
+                <br/>
+                <!-- riga 1 -->
+                <span class="open-tag" style="padding-left: 5%">&lttr&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&ltth&gt</span>
+                Nazione
+                <span class="close-tag" style="padding-left: 10%">&lt/th&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&ltth&gt</span>
+                Capitale
+                <span class="close-tag" style="padding-left: 10%">&lt/th&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&ltth&gt</span>
+                Abitanti
+                <span class="close-tag" style="padding-left: 10%">&lt/th&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&lt/tr&gt</span>
+                <br/>
+                <!-- riga 2 -->
+                <span class="open-tag" style="padding-left: 5%">&lttr&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Italia
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Roma
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                61 261 254
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&lt/tr&gt</span>
+                <br/>
+                <!-- riga 3 -->
+                <span class="open-tag" style="padding-left: 5%">&lttr&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Spagna
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Madrid
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                47 042 984
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&lt/tr&gt</span>
+                <br/>
+                <!-- riga 4 -->
+                <span class="open-tag" style="padding-left: 5%">&lttr&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Lituania
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Vilnius
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                3 525 761
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&lt/tr&gt</span>
+                <br/>
+                <!-- riga 5 -->
+                <span class="open-tag" style="padding-left: 5%">&lttr&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Portogallo
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Lisbona
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                10 781 459
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&lt/tr&gt</span>
+                <br/>
+                <!-- riga 6 -->
+                <span class="open-tag" style="padding-left: 5%">&lttr&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Irlanda
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                Dublino
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&lttd&gt</span>
+                4 722 028
+                <span class="close-tag" style="padding-left: 10%">&lt/td&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&lt/tr&gt</span>
+                <br/>
+                <span class="open-tag">&lt/table&gt</span>
+            </div>
+            <p>
+                Utilizzando i fogli di stile è possibile modificare il bordo della tabella, la spaziatura tra le celle, 
+                lo spazio occupato nella pagina da tutta la tabella oppure lo spazio di ogni colonna.
+                <br/>
+                Di seguito una tabella con i principali attributi da usare per la modifica della tabella. 
+                Alcune di queste possono essere utilizzate per modificare table, th o td, come ad esempio width, quindi è necessario, 
+                nel foglio di stile, andare a indicare l'elemento che si desidera modificare.
+            </p>
+            <table>
+                <tr>
+                    <th>Attributo</th>
+                    <th>Modifica</th>
+                </tr>
+                <tr>
+                    <td>border</td>
+                    <td>Bordo</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td>Largezza, che deve essere indicata con un valore percentuale</td>
+                </tr>
+                <tr>
+                    <td>cellpadding</td>
+                    <td>Lo spazio tra le celle della tabella</td>
+                </tr>
+                <tr>
+                    <td>cellspacing</td>
+                    <td>Lo spazio tra il contenuto delle celle e i bordi</td>
+                </tr>
+            </table>
+              
+        </div>
+        <!--bottoni navigazione-->
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../html-pages/html-page-4.html" title="Ritorna alla pagina precedente">&lt; Ritorna alla pagina precedente</a>
+            </div>
+            <div class="nav-button">
+                <a href="../html-pages/html-page-6.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div>
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>
+</html>

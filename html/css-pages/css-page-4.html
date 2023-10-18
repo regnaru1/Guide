@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guida alla creazione di un sito web utilizzando il linguaggio HTML 5 e CSS 3">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!--collegamento del file JS-->
+    <script src=""></script>
+    <!--impostazione del titolo e icona-->
+    <title>CSS 3 - Animazioni</title>
+    <link rel="website icon" type="png" href="../../images/icons/css.png">
+</head>
+<body>
+    <!--div contenente tutto il sito-->
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                    <a href="../html-pages/html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="./css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>CSS ver. 3</h1>
+            <div style="display: flex">
+                <progress value="100" max="100"></progress>
+            </div>
+            <h2>Le animazioni</h2>
+            <p>
+                Attraverso CSS è possibile realizzare tre tipi di animazioni: transform, transition e keyframe.
+            </p>
+            <h3>
+                Transform
+            </h3>
+            <p>
+                Le animazioni di tipo transform vengono utilizzate sulle pseudoclassi e permettono di modificare l'aspetto di un elemento 
+                nel momento in cui vengono rispettate determinate condizioni.
+                <br/>
+                Si possono applicare tre tipi di trasformazioni 2D: <b>translate</b> (è necessario indicare le coordinate x, y), <b>rotate</b> 
+                (è necessario indicare i gradi sessagesimali utilizzando il suffisso deg dopo al numero) e <b>scale</b> (è necessario indicare le 
+                coordinate x, y).
+                <br/>
+                Possono essere applicate più trasformazioni nella stessa dichiarazione, queste verranno tutte eseguite contemporanemante.
+            </p>
+            <div class="board">
+                <span>input:focus</span>{
+                <br/>
+                <span style="margin-left: 10%">transform: translate(24, 85);</span>
+                <br/>
+                <span style="margin-left: 10%">transform: rotate(20deg);</span>
+                <br/>
+                }
+            </div>
+            <p class="esempio">
+                Esempio di transform applicata su un tag input.
+                <br/>
+                Il risultato finale è il seguente:
+            </p>
+            <div class="input-container">
+                <input type="text" name="text" class="prova">
+            </div>
+            <h3>
+                Transition
+            </h3>
+            <p>
+                Le animazioni di tipo transition vanno inserite sia nella regola statica che nella pseudoclasse. Nella <b>regola statica</b> 
+                si inseriscono:
+            </p>
+            <ul>
+                <li>transition-property → si indica la proprietà che si vuole modificare</li>
+                <li>transition-duration → si indica il tempo, in ms, impiegato a compiere l'animazione</li>
+                <li>transition-delay → si indica il ritardo dell'animazione, ovvero quanto tempo deve passare prima che l'animazione inizi</li>
+            </ul>
+            <p>
+                Nella regola con la pseudoclasse si inserisce la modifica che si vuole apportare.
+            </p>
+            <p class="esempio">
+                Modifica alla regola statica
+            </p>
+            <div class="board">
+                <span>input</span>{
+                <br/>
+                <span style="margin-left: 10%">transition-property: color;</span>
+                <br/>
+                <span style="margin-left: 10%">transition-duration: 1s;</span>
+                <br/>
+                <span style="margin-left: 10%">transition-delay: 5ms;</span>
+                <br/>
+                }
+            </div>
+            <p class="esempio">
+                Modifica alla regola con pseudoclasse
+            </p>
+            <div class="board">
+                <span>input:active</span>{
+                <br/>
+                <span style="margin-left: 10%">color: #FF0000;</span>
+                <br/>
+                }
+            </div>
+            <p class="esempio">
+                Esempio di transition applicata su un tag input.
+                <br/>
+                Il risultato finale è il seguente:
+            </p>
+            <div class="input-container">
+                <input type="button" value="io sono un bottone" class="prova">
+            </div>
+            <h3>
+                @Keyframes
+            </h3>
+            <p>
+                Le animazioni di tipo keyframes permettono un graduale cambiamento del valore di una proprietà da un punto di partenza 
+                a uno di arrivo, entrambi definiti dal programmatore.
+                <br/>
+                Queste animazioni richiedono obbligatoriamente di attribuire un nome all'animazione e di determinare il valore di una determinata 
+                proprietà a un livello percentuale che va da 0% a 100%. I livelli 0% e 100% sono così importanti che gli sono stati 
+                creati dei comandi che hanno lo stesso effetto: <b>from</b> (0%) e <b>to</b> (100%). Nel caso in cui vengano omessi nella dichiarazione 
+                il browser inizierà o terminerà l'animazione con i valori definiti per gli stadi intermedi.
+
+
+
+            </p>
+            <div class="board">
+                <span>@keyframes miaAnimazione</span>{
+                <br/>
+                <span style="margin-left: 10%">0% {width: 30%;}</span>
+                <br/>
+                <span style="margin-left: 10%">25% {width: 40%;}</span>
+                <br/>
+                <span style="margin-left: 10%">50% {width: 50%;}</span>
+                <br/>
+                <span style="margin-left: 10%">75% {width: 60%;}</span>
+                <br/>
+                <span style="margin-left: 10%">100% {width: 70%;}</span>
+                <br/>
+                }
+            </div>
+            <p class="esempio">
+                Creazione della keyframes
+            </p>
+            <div class="board">
+                <span>input:hover</span>{
+                <br/>
+                <span style="margin-left: 10%">animation-name: miaAnimazione;</span>
+                <br/>
+                <span style="margin-left: 10%">animation-duration: 5s;</span>
+                <br/>
+                }
+            </div>
+            <p class="esempio">
+                Esempio di keyframe applicata su un tag input.
+                <br/>
+                Il risultato finale è il seguente:
+            </p>
+            <div class="input-container" id="keyframe-container">
+                <input type="number" name="number" class="prova">
+            </div>
+        </div>
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../css-pages/css-page-3.html" title="Ritorna alla pagina precedente">&lt; Ritorna alla pagina precedente</a>
+            </div>
+            <!-- <div class="nav-button">
+                <a href="../css-pages/css-page-5.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div> -->
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>

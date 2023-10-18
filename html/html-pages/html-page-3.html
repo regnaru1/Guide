@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina della guida dedicata a HTML ver. 5">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!--collegamento del file js-->
+    <!-- <script src=""></script> -->
+    <!--impostazione del titolo e icona-->
+    <title>HTML 5 - Selettori di elementi</title>
+    <link rel="website icon" type="png" href="../../images/icons/html.png">
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                <a href="./html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="../css-pages/css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>HTML ver. 5</h1>
+            <!-- progress bar -->
+            <div style="display: flex">
+                <progress value="50" max="100"></progress>
+            </div>
+            <h2>I selettori ID e CLASS</h2>
+            <p>
+                Per sfruttare al meglio le pontenzialità di HTML e CSS sono stati messi a disposizione i selettori, due tra questi, quelli che andremo a 
+                vedere in questa pagina, sono il selettore ID e il selettore CLASS.
+                <br/>
+                Il selettore ID è un <b>selettore univoco</b>, ovvero si può applicare a un solo elemento per pagina, mente il selettore CLASS non lo è, può quindi 
+                essere attribuito a più tag all'interno della stessa pagina.
+                <br/>
+                Questi selettori svolgono la stessa funzione e hanno le stesse caratteristiche:
+                <ul>
+                    <li>
+                        Sono attributi da inserire nei tag dei file .html;
+                    </li>
+                    <li>
+                        A un solo elemento possono essere attributi contemporaneamente sia un selettore ID che un selettore CLASS;
+                    </li>
+                    <li>
+                        Possono essere utilizzati per i link interni;
+                    </li>
+                    <li>
+                        Possono essere utilizzati per modificare alcune caratteristiche dell'elemento mediante i fogli di stile.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Per richiamare un elemento a cui è stato inserito uno dei due selettori precedenti, o entrambi, si utilizza un carattere predefinito.
+            </p>
+            <table>
+                <tr>
+                    <th>
+                        Tag HTML
+                    </th>
+                    <th>
+                        Chiamante
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Se si usa il selettore ID
+                    </td>
+                    <td>
+                        Si inserisce # prima del nome inserito nel tag
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Se si usa il selettore CLASS
+                    </td>
+                    <td>
+                        Si inserisce . prima del nome inserito nel tag
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <h2>Selettore padre-figlio</h2>
+            <table>
+                <tr>
+                    <td>
+                        div > a
+                    </td>
+                    <td>
+                        Questo selettore prende in considerazione tutti i link (a) che si trovano all'interno di un contenitore (div).
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <h2>Selettore fratelli adiacenti</h2>
+            <table>
+                <tr>
+                    <td>
+                        div + a
+                    </td>
+                    <td>
+                        Questo selettore prende in considerazione tutti i link (a) che si trovano dopo un contenitore (div).
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <h2>Selettore di attributo</h2>
+            <table>
+                <tr>
+                    <td>
+                        a[chiave="valore"]
+                    </td>
+                    <td>
+                        Questo selettore prende in considerazione tutti i link (a) che hanno l'attributo indicato.
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <p>
+                Al posto del nome del tag (a, div) si può inserire il nome attribuito a un selettore ID o CLASS, adeguatamente preceduto da . o #.
+                La maggior parte di questi selettori viene utilizzata all'interno dei <a href="../css-pages/css-page.html" title="Guida a CSS">fogli di stile di CSS</a>
+            </p>
+        </div>
+        <!--bottoni navigazione-->
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../html-pages/html-page-2.html" title="Ritorna alla pagina precedente">&lt; Ritorna alla pagina precedente</a>
+            </div>
+            <div class="nav-button">
+                <a href="../html-pages/html-page-4.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div>
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>
+</html>

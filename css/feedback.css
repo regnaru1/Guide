@@ -1,0 +1,71 @@
+* {
+    font-size: 20px;
+}
+
+label span{
+    color: #0000FF;
+    font-size: 85%
+}
+
+#suggerimenti{
+    width: 40%;
+    height: 60%;
+    margin: 0px auto
+}
+
+#commenti{
+    font-family: verdana;
+    color: #000000;
+}
+
+#commenti label{
+    float: left;
+    display: block;
+    margin: 3px;
+    clear: both
+}
+
+#commenti input{
+    color: #000000;
+    margin: 007px0;
+    border: 1pxsolid#CCCCCC;
+    width: 220px;
+    float: right;
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    -Webkit-border-radius: 9px;
+    padding: 3px10px
+}
+
+#commenti textarea{
+    color: #666666;
+    float: right;
+    font-family:"Candara", "Geneva", "Tahoma", "sans-serif";
+    height: 90px;
+    border: 1pxsolid#CCCCCC;
+    width: 220px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -Webkit-border-radius: 12px;
+    padding: 2px10px;
+    margin-bottom: 10px
+}
+
+#buttons{
+    display: flex; 
+}
+
+.bottone{
+    border: 3px solid rgb(3, 12, 133);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -Webkit-border-radius: 10px;
+    cursor: pointer;
+    margin: 15px;
+    float: right;
+    font-weight: bold;
+    padding: 5px;
+    width: 30%;
+    background-color: rgb(3, 12, 133);
+    color: #FFFFFF;
+}

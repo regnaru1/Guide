@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina della guida dedicata a HTML ver. 5">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!--collegamento del file js-->
+    <!-- <script src=""></script> -->
+    <!--impostazione del titolo e icona-->
+    <title>HTML 5 - Link</title>
+    <link rel="website icon" type="png" href="../../images/icons/html.png">
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                <a href="./html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="../css-pages/css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>HTML ver. 5</h1>
+            <!-- progress bar -->
+            <div style="display: flex">
+                <progress value="62.5" max="100"></progress>
+            </div>
+            <h2>I link</h2>
+            <p>
+                Per inserire un link all'interno di un documento HTML si utilizza il tag a, che presenta 
+                generalmente tre attributi, che possono essere inseriti nel tag di apertura nell'ordine che si vuole. 
+                <br/>
+                L'attributo <b>href</b> indica l'URL a cui viene rimandato l'utente, che deve contenere anche il protocollo.
+                <br/>
+                L'attributo <b>target</b> se possiede come valore "new" oppure "_blank" apre il link inserito come valore 
+                nell'attributo href in una nuova pagina.
+                <br/>
+                L'attributo <b>title</b> indica il testo che appare se si mantiene il cursore sul testo (hover).
+                <br/>
+                Tra il tag di apertura e quello di chiusura si inserisce l'<b>anchor</b>, il testo visualizzabile e cliccabile dall'utente.
+            </p>
+            <div class="board" style="width: 55%">
+                <span class="open-tag">&lta</span>
+                href="https://www.google.it" target="new" title="Google"
+                <span class="close-tag">&gt</span>
+                <a href="https://www.google.it" target="new" title="Google">CLICCAMI!</a>
+                <span class="open-tag">&lt</span>
+                <span class="close-tag">/a&gt</span>
+            </div>
+            <p class="esempio">
+                Questo è un link presente nel testo "CLICCAMI!" che riporta all'URL https://www.google.it in una nuova pagina. 
+                Se il cursore viene mantenuto sul testo apparirà il testo Google.
+            </p>
+            <p>
+                Un link presenta generalmente tre colori:
+                <br/>
+                Blu: nessuno sulla macchina ha ancora aperto il link.
+                <br/>
+                Viola: il lik è già stato visitato.
+                <br/>
+                Rosso: è stato effettuato un clic sul link con il tasto destro
+                <br/>
+                Questi colori venivano utilizzati principalmente negli anni 90 del '900, e adesso non sono più largamente utilizzati, 
+                è però possibile modificare i colori predefiniti utilizzando le <a style="text-decoration: underline;" href="../css-pages/css-page-2.html#pseudo-link"><b>pseudoclassi</b></a>.
+            </p>
+            <p>
+                Un link può essere utilizzato per rimandare a una parte precisa di una pagina web e non necessariamente ad un'altra pagina. 
+                Per riuscirci vi sono due metodi:
+                <ul>
+                    <li>
+                        <b>Selettore ID o selettore CLASS</b>
+                        <ol>
+                            <li>
+                                Inserire all'interno del tag di apertura del paragrafo a cui voglio reindirizzare l'utente 
+                                un selettore di elemento;
+                            </li>
+                            <li>
+                                Nel tag di apertura del link inserire come valore dell'attributo href il nome attribuito al selettore che deve essere 
+                                preceduto da # se il selettore utilizzato è ID o da . se il selettore utilizzato è CLASS.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>Utilizzando un altro tag a</b>
+                        <ol>
+                            <li>
+                                Inserire l'ancora: un tag a con solamente l'attributo name="sezione";
+                            </li>
+                            <li>
+                                Nel tag a che rimanda alla sezione del testo inserire come valore dell'attributo href #sezione.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Se si vuole inserire un collegamento a una sezione di una pagina diversa da quella visualizzata in quel momento è necessario inserire 
+                il percorso (meglio se relativo) del documento in cui si trova la sezione che si vuole raggiungere.
+                <br/>
+                Un link può essere utilizzato per inviare una mail, inserendo come valore dell'attributo href mailto: seguito dall'indirizzo mail, oppure per 
+                far effettuare una telefonata, inserendo come valore dell'attributo href tel:+ seguito dal numero di telefono completo di prefisso telefonico.
+            </p>
+            <p class="esempio">
+                Esempio di dichiarazione di un tag a per l'invio di una mail
+            </p>
+            <div class="board">
+                <span class="open-tag">&lta</span>
+                href="mailto:indirizzo@dominio.com"
+                <span class="close-tag">&gt</span>
+                <a href="mailto:indirizzo@dominio.com">Invia una mail!</a>
+                <span class="open-tag">&lt</span>
+                <span class="close-tag">/a&gt</span>
+            </div>
+            <p class="esempio">
+                Questo è un link presente nel testo "Invia una mail!" che permette di inviare una e-mail all'indirizzo 
+                indirizzo@dominio.com.
+            </p>  
+        </div>
+        <!--bottoni navigazione-->
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../html-pages/html-page-3.html" title="Ritorna alla pagina precedente">&lt; Ritorna alla pagina precedente</a>
+            </div>
+            <div class="nav-button">
+                <a href="../html-pages/html-page-5.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div>
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>
+</html>

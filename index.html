@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guida alla creazione di un sito web utilizzando il linguaggio HTML 5 e CSS 3">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/feedback.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <!--collegamento del file JS-->
+    <script src="./js/inviaCommenti.js"></script>
+    <!--impostazione del titolo e icona-->
+    <title>Guida HTML e CSS</title>
+    <link rel="website icon" type="png" href="./images/icons/code.png">
+</head>
+<body>
+    <!--div contenente tutto il sito-->
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="#introduzione" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                    <a href="./html/html-pages/html-page-1.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="./html/css-pages/css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <div id="title">
+                <h1>Guida HTML 5 e CSS 3</h1>
+            </div>
+            <!--corpo del sito-->
+            <!--introduzione-->
+            <a name="introduzione"></a>
+            <p>
+                HTML e CSS sono due degli strumenti necessari per la creazione di un sito web, nonostante entrambi non siano dei linguaggi di programmazione.
+                All'interno di questa guida andremo ad affrontarli, rispettivamente nelle versioni 5 e 3.
+                Questi due strumenti sono stati introdotti in seguito al World Wide Web (WWW), un'interfaccia grafica ideata dal fisico inglese Tim Berners Lee insieme a Robert Cailliau, che ha introdotto la possibilità 
+                di aggiungere alle pagine web:
+            </p>
+            <ul>
+                <li id="text">
+                    Formattazione al testo
+                </li>
+                <li id="colors">
+                    Colori
+                </li>
+                <li>
+                    Immagini
+                </li>
+                <img src="./images/yt-logo.png" alt="Logo YouTube, immagine di esempio" width="100px">
+                <li>
+                    Video
+                </li>
+                <iframe width="460" height="260" src="https://www.youtube.com/embed/Y6EcVglnI-M" title="1 Hour Of Iconic Mario Kart Music For Studying | NOSTALGIA OVERLOAD" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <li>
+                    Suoni
+                </li>
+                <p style="width:100%; font-size:20px">
+                    Rrrrrose Azerty, Le Bleu de la Nuit
+                </p>
+                <audio controls="controls">
+                    <source src="./audios/Rrrrrose_Azerty-Le_Bleu_de_la_Nuit.mp3" type="audio/mp3">
+                    Siamo spiacenti, ma il file audio non può essere riprodotto! *_*
+                </audio>
+            </ul>
+            <p>
+                Esattamente gli elementi inseriti qui sopra!
+            </p>
+            <div id="buttons">
+                <div class="button">
+                <a href="./html/html-pages/html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="button">
+                    <a href="./html/css-pages/css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+            <div id="footer">
+                <!--box suggerimenti-->
+                Facci sapere cosa ne pensi, lascia un commento compilando i campo sottostanti!
+                <div id="suggerimenti">
+                    <form method="post" name="formcommenti" id="commenti">
+                        <fieldset>
+                            <legend>
+                                Inserisci i tuoi dati
+                            </legend>
+                            <label for="nome">Nome <span>(obbligatorio)</span></label>
+                            <input type="text" name="nome" id="nome" placeholder="Inserisci il tuo nome" required>
+                            <label for="cognome">Cognome </label>
+                            <input type="text" name="cognome" id="cognome" placeholder="Inserisci il tuo cognome">
+                            <label for="email">Email <span>(obbligatorio)</span></label>
+                            <input type="email" name="email" id="email" placeholder="Inserisci la tua email"required>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mandaci le tue osservazioni</legend>
+                            <label for="oggetto">Oggetto <span>(obbligatorio)</span></label>
+                            <input type="text" name="oggetto" id="oggetto" placeholder="Oggetto" required>
+                            <label for="messaggio">Messaggio</label>
+                            <textarea cols="40" rows="20" name="messaggio" id="messaggio" placeholder="Il tuo messaggio"></textarea>
+                        </fieldset>
+                        <div id="buttons">
+                            <!--trasformare in input e mettere script-->
+                            <div type="reset" name="reset" class="bottone" value="Annulla">Annulla</div>
+                            <div type="button" name="invia" class="bottone" value="Invia" onclick="inviaCommenti()">Invia</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="ringraziamenti">
+                    Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+                    <br/>
+                    La traccia audio inserita è stata scaricata dal sito <a class="a-footer" href="https://freemusicarchive.org/music/rrrrrose-azerty/fin-de-la-communication/le-bleu-de-la-nuit/" target="new" title="www.freemusicarchive.org">freemusicarchive</a>.
+                    <br/>
+                    Le icone sono state scaricate dai siti <a class="a-footer" href="https://flaticon.com" target="new" title="flaticon.com">flaticon.com</a>, 
+                    <a class="a-footer" href="https://icones.pro" target="new" title="icones.pro">icones.pro</a>, <a class="a-footer" href="https://toppng.com" target="new" title="flaticon.com">toppng.com</a> e 
+                    <a class="a-footer" href="https://iconfinder.com" target="new" title="iconfinder.com">iconfinder.com</a>
+                    <br/>
+                    Il form per l'inserimento dei commenti è stato estrapolato dal libro "Web e mobile - Linguaggi lato client" 
+                    <br/>
+                    di Agostino Lorenzi, Richelmo Giupponi e Daniela Iovino e in seguito adattato alla guida.
+                    <br/>
+                    Per eventuali segnalazioni inviare una mail all'indirizzo <a class="a-footer" href="mailto:garello.matteo@denina.it">garello.matteo@denina.it</a>
+                </div>
+                <div class="ringraziamenti">
+                    &copy
+                    <script src="./js/year.js" type="text/javascript"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

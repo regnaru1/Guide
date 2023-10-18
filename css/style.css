@@ -1,0 +1,111 @@
+h1, h2, div, p{
+    font-family:"Candara", "Geneva", "Tahoma", "sans-serif";
+}
+
+body{
+    background-color: rgb(145, 200, 235);
+}
+
+img[alt="User icon"]{
+    height: 30px;
+    margin-top: 5px;
+}
+
+#navbar{
+    background-color: rgb(3, 12, 133);
+    height: 40px;
+    display: flex;
+}
+
+#labels{
+    display: flex;
+}
+
+.option{
+    border: 1px solid white;
+    width: 150px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+#guida{
+    width: 70%;
+    margin: 0px auto;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+}
+
+.button{
+    background-color: rgb(40, 46, 130);
+    color: #FFFFFF;
+    font-size: 25px;
+    border-radius: 15px;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 90px;
+    margin:20px;
+    color: rgb(3, 12, 133);
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(3, 12, 133);
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(3, 12, 133);
+    margin-top: 30px;
+}
+
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+ul, ol{
+    font-size: 30px;
+    width:70%;
+    margin:0px auto;
+}
+
+li > ol{
+    font-size: 30px;
+    width:90%;
+    margin:0px auto;
+}
+
+p{
+    margin:0px auto;
+    font-size: 30px;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+/*elementi della lista*/
+#text{
+    font-style: italic;
+    font-weight: bolder;
+}
+
+#colors{
+    color: white;
+}

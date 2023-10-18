@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guida alla creazione di un sito web utilizzando il linguaggio HTML 5 e CSS 3">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!--collegamento del file JS-->
+    <script src=""></script>
+    <!--impostazione del titolo e icona-->
+    <title>CSS 3 - Pseudoclassi</title>
+    <link rel="website icon" type="png" href="../../images/icons/css.png">
+</head>
+<body>
+    <!--div contenente tutto il sito-->
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                    <a href="../html-pages/html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="./css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>CSS ver. 3</h1>
+            <div style="display: flex">
+                <progress value="60" max="100"></progress>
+            </div>
+            <h2>Le pseudoclassi</h2>
+            <p>
+                Le pseudoclassi sono degli elementi che permettono una modifica maggiormente approfondita, vanno inserite subito dopo 
+                al selettore anticipate solamente dai due punti (:). 
+                Ciascuna pseudoclasse può essere applicata a qualsiasi selettore.
+            </p>
+            <h3 id="preudo-link">
+                Pseudoclassi per i link
+            </h3>
+            <p>
+                Esistono delle pseudoclassi che, se applicate ai link, permettono di modificarne il comportamento se 
+                non è ancora stato aperto, se è già stato visitato oppure se si preme il tasto destro su di esso. 
+                <br/>
+                Queste pseudoclassi sono le seguenti:
+            </p>
+            <table>
+                <tr>
+                    <th>
+                        Pseudoclasse
+                    </th>
+                    <th>
+                        Modifica
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        :link
+                    </td>
+                    <td>
+                        Permette di modificare il comportamento di un link mai visitato.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        :visited
+                    </td>
+                    <td>
+                        Permette di modificare il comportamento di un link già visitato.
+                    </td>
+                </tr>
+            </table>
+            <h3>
+                Pseudoclassi dinamiche
+            </h3>
+            <p>
+                Le pseudoclassi dinamiche vengono utilizzate per applicare delle modifiche a uno o più elementi 
+                nel momento in cui cambia il loro stato.
+            </p>
+            <table>
+                <tr>
+                    <th>
+                        Pseudoclasse
+                    </th>
+                    <th>
+                        Modifica
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        :active
+                    </td>
+                    <td>
+                        Permette di modificare il comportamento di un elemento che viene premuto, la durata è quella di un clic.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        :hover
+                    </td>
+                    <td>
+                        Permette di modificare il comportamento di un elemento quando il cursore ci passa sopra.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        :active
+                    </td>
+                    <td>
+                        Permette di modificare il comportamento di un elemento quando viene attivato (ad esempio un pulsante che viene premuto).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        :focus
+                    </td>
+                    <td>
+                        Permette di modificare il comportamento di un elemento quando ha il focus, ovvero quando l'utente ci sta interagendo (ad esempio l'utente ha il cursore lampeggiante in un tag input).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        :first.child
+                    </td>
+                    <td>
+                        Permette di modificare il comportamento del primo elemento figlio dell'elemento a cui viene applicata.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        :nth-child(n)
+                    </td>
+                    <td>
+                        Permette di modificare il comportamento esclusivamente del selettore numero <i>n</i> corrispondente a cui viene applicato (ad esempio p:nth-child(2) modifica il comportamento del secondo p; <i>n</i> deve essere un numero intero che parte da 1 ).
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../css-pages/css-page-1.html" title="Ritorna alla pagina precedente">&lt; Ritorna alla pagina precedente</a>
+            </div>
+            <div class="nav-button">
+                <a href="../css-pages/css-page-3.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div>
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>

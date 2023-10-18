@@ -1,0 +1,50 @@
+/*board*/
+.board{
+    text-align: left;
+}
+
+span{
+    color: #000000;
+}
+
+/*animazioni*/
+.input-container{
+    width: 30%;
+    margin: 0px auto;
+}
+
+#keyframe-container{
+    width: 100%;
+}
+
+.prova{
+    width: 100%;
+}
+
+input[type="text"]:focus{
+    transform: translate(24, 85);
+    transform: rotate(20deg);
+}
+
+input[type="button"]{
+    transition-property: color ;
+    transition-duration: 1s;
+    transition-delay: 5ms;
+}
+
+input[type="button"]:active{
+    color: #FF0000;
+}
+
+input[type="number"]:hover{
+    animation-name: miaAnimazione;
+    animation-duration: 5s;
+}
+
+@keyframes miaAnimazione {
+    0%      {width: 30%;}
+    25%     {width: 40%;}
+    50%     {width: 50%;}
+    75%     {width: 60%;}
+    100%    {width: 70%;}
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina della guida dedicata a HTML ver. 5">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!--collegamento del file js-->
+    <!-- <script src="""></script> -->
+    <!--impostazione del titolo e icona-->
+    <title>HTML 5 - Nozioni di base</title>
+    <link rel="website icon" type="png" href="../../images/icons/html.png">
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                    <a href="./html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="../css-pages/css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>HTML ver. 5</h1>
+            <!-- progress bar -->
+            <div style="display: flex">
+                <progress value="12.5" max="100"></progress>
+            </div>
+            <h2>Nozioni di base</h2>
+            <p>
+                Il linguaggio <b>HTML</b> (HyperText Markup Language), letteralmente il linguaggio per definire gli ipertesti, nasce verso l'inizio degli anni 90 del '900, insieme al protocollo HTTP (HyperText Transfer Protocol), necessario per il trasferimento dei dati all'interno del "neonato" World Wide Web.
+                Questo è un <b>linguaggio interpretato</b>, vale a dire che vi è uno strumento, il browser, che "legge" il testo presente nel file con estensione .htm o .html e lo trasforma nel suo corrispettivo a video. 
+                Tra i browser più conosciuti ci sono <a class="browser" target="new" href="https://www.google.it/intl/it/chrome/?brand=CHBD&gclid=CjwKCAiAwc-dBhA7EiwAxPRylIB26hVRDtAi908DIIlbehfZu4FmYIgGnCnUK4BKw8st1N8eKlD1cRoCQ3oQAvD_BwE&gclsrc=aw.ds" title="Download Google Chrome">Google Chrome</a>, <a class="browser" target="new" href="https://www.mozilla.org/it/firefox/new/" title="Download Firefox Browser">Mozilla Firefox</a>, <a class="browser" target="new" href="https://www.microsoft.com/it-it/edge/home?form=MA13FJ" title="Download Microsoft Edge">Microsoft Edge</a> e <a class="browser" target="new" href="https://support.apple.com/it_IT/downloads/safari" title="Download Safari per MacOS">Safari</a>, ma non sono assolutamente gli unici.
+                <br/>
+                Come ogni strumento informatico, persino il linguaggio HTML ha subito una notevole evoluzione nel corso del tempo, passando dalle prime versioni, povere di opportunità, fino a giungere alla più recente che offre un'ampia gamma di opzioni per strutturare al meglio ciascun sito web.
+            </p>
+            <table>
+                <caption>Versioni di HTML e relative date di uscita</caption>
+                <tr>
+                    <th>Versione</th>
+                    <th>Anno di uscita</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>Giugno 1993</td>
+                </tr>
+                <tr>
+                    <td>HTML 3.0</td>
+                    <td>Giugno 1995</td>
+                </tr>
+                <tr>
+                    <td>HTML 3.2</td>
+                    <td>Giugno 1997</td>
+                </tr>
+                <tr>
+                    <td>HTML 4</td>
+                    <td>Giugno 1998</td>
+                </tr>
+                <tr>
+                    <td>HTML 4.01</td>
+                    <td>24 dicembre 1999</td>
+                </tr>
+                <tr>
+                    <td>HTML 5</td>
+                    <td>28 ottobre 2014</td>
+                </tr>
+                <tr>
+                    <td>HTML 5.2</td>
+                    <td>14 dicembre 2017</td>
+                </tr>
+            </table>
+            <p>
+                <!--cartella del sito-->
+                Sostanzialmente, un file .html non è nient'altro che un documento di testo la cui estensione è .html e non .txt, il che lo rende un documento modificabile da un qualsiasi editor di testo (Blocco Note, Simple Text, gedit, Notepad++).
+                Vi sono anche dei programmi che sono degli editor di testo specializzati per la programmazione, come ad esempio Visual Studio Code.
+                <br/>
+                Per iniziare la progettazione di un sito web è necessario creare una cartella, o più correttamente una directory, che lo contenga. All'interno sono contenute altre directory: css, images, js. All'interno di queste directory vengono inseriti 
+                i file che andranno a comporre il sito. All'interno della directory css vanno inseriti i <b>fogli di stile</b> (approfonditi nella <a href="../html/css-page.html" title="Guida a CSS">guida a CSS</a>), nella directory images le immagini che si andranno 
+                ad utilizzare all'interno sito e infine nella directory js gli <b>script</b> (approfonditi nella <a href="../html/js-page.html" title="Guida a Javascript">guida a Javascript</a>).
+                All'interno della directory del sito va creato il file <b>index.html</b> oppure <b>default.html</b>, la pagina iniziale del sito. Successivamente va aperta in un editor di testo (consigliamo <a id="download" href="https://code.visualstudio.com/download" target="new" title="Download Visual Studio Code">VS Code</a>).
+            </p>
+            <!--tags-->
+            <h3>
+                I tag
+            </h3>
+            <p>
+                La pagina web viene strutturata utilizzando dei comandi specifici, che prendono il nome di <b>tag</b>. 
+                I tag si possono dividere in due grandi famiglie: i <b>tag richiudibili</b> e i <b>tag non richiudibili</b>.
+                <br/>
+                <b>I tag richiudibili</b> sono composti da due parti: il <b>tag di apertura</b> e il <b>tag di chiusura</b>.
+                Ogni tag ha la propria parola chiave che definisce il suo comportamento. Nel caso di un tag di apertura viene inserita la parola tra i simboli di minore (<) e maggiore (>), mentre nel caso di un tag di chiusura la parola è preceduta da uno slash (/).
+            </p>
+            <p class="esempio">
+                Esempio di tag di apertura (inizio grassetto):
+            </p>
+            <div class="board">
+                <span class="open-tag">&ltb&gt</span>
+            </div>
+            <p class="esempio">
+                Esempio di tag di chiusura (fine grassetto):
+            </p>
+            <div class="board">
+                <span class="open-tag">&lt/b&gt</span>
+            </div>
+            <p>
+                <b>I tag non richiudibili</b>, invece, presentano lo slash (/) subito prima del simbolo di maggiore (>).
+            </p>
+            <p class="esempio">
+                Esempio di tag non richiudibile (ritorno a capo):
+            </p>
+            <div class="board">
+                <span class="open-tag">&ltbr/&gt</span>
+            </div>
+            <p>
+                Per accedere a una lista completa dei tag utilizzabili con HTML 5 <a style="text-decoration: underline" href="https://www.tutorialrepublic.com/html-reference/html5-tags.php" title="Lista dei tag utilizzabili con HTML 5" target="new">qui!</a>
+            </p>
+            <p class="esempio" style="width: 40%">
+                Attenzione! Il link rimanda a un sito esterno a questa guida.
+            </p> 
+            <!--attributi e proprietà-->
+            <h3>
+                Gli attributi e le proprietà
+            </h3>
+            <p>
+                All'interno dei tag, nel tag di apertura se si tratta di tag richiudibili, si possono aggiungere delle informazioni sotto forma di <b>attributi</b> oppure di <b>proprietà</b>, ma sostanzialmente, qual è la differenza?
+                <br/>
+                Gli <b>attributi</b> sono caratterizzati da una struttura <span style="color:#FF0000">chiave</span>=<span style="color:#7700ff">"valore"</span>.
+                <br/>
+                Le <b>proprietà</b> presentano solamente la <span style="color:#FF0000">chiave</span>.
+            </p>
+            <p class="esempio">
+                Ecco come si presenta un esempio di tag con attributi e proprietà:
+            </p>
+            <div class="board">
+                <span style="color: rgb(12, 133, 245)">&ltinput</span>
+                <span style="background-color:rgb(255, 98, 0);"><span style="color:#FF0000">type</span>=<span style="color:#7700ff">"button"</span></span>
+                <span style="color:#FF0000">required</span>
+                <span style="color: rgb(12, 133, 245)">/&gt</span>
+            </div>
+            <p class="esempio">
+                L'attributo è evidenziato in arancione, la chiave in rosso e il valore in blu.
+            </p>
+            <p id="boolean-attributes">
+                Gli attributi possono essere di tipo <b>booleano</b>, ovvero che hanno solo due stati: <b>vero</b> o <b>falso</b>. Questi attributi possono essere inseriti in forme diverse 
+                ma significare comunque la stessa cosa, come ad esempio:
+                <br/>
+                <span>&ltaudio controls="controls"&gt</span>
+                <br/>
+                <span>&ltaudio controls=""&gt</span>
+                <br/>
+                <span>&ltaudio controls&gt</span>
+                <br/>
+                che significano tutti la stessa cosa. Questo è possibile poiché dichiarando l'attributo si attribuisce il valore vero alla condizione che determina (in questo caso si tratta dei 
+                controlli per un file audio), quindi possono essere ridotti e semplificati fino ad assomigliare a delle proprietà, poiché per rendere falsa la condizione 
+                è sufficiente rimuovere l'attributo corrispondente.
+            </p>
+            <!--commenti-->
+            <h3>
+                I commenti
+            </h3>
+            <p>
+                Di fondamentale importanza sono i <b>commenti</b>, che servono per illustrare le funzionalità di un determinato frammento di codice oppure per renderlo maggiormente leggibile. 
+                Questi commenti possono essere inseriti su più righe, vale a dire che un commento può essere aperto alla riga 16 e chiuso alla riga 19.
+            </p>
+            <p class="esempio">
+                Un commento viene delimitato da:
+            </p>
+            <div class="board">
+                <span class="open-tag" style="color: rgb(21, 152, 21)">&lt!--</span>
+                commento
+                <span class="close-tag" style="color: rgb(21, 152, 21)">--&gt</span>
+            </div>
+            <p>
+                Se si utilizza Visual Studio Code è possibile aggiungere commenti posizionando il cursore alla riga in cui si desidera inserire il commento e utilizzare di seguito le 
+                combinazioni di tasti <b>Ctrl+K</b> e <b>Ctrl+C</b> su una macchina con Windows o Linux, invece su Mac <b>Command+K</b> e <b>Command+C</b>.
+                <br/>
+                Se l'intento è invece quello di rimuoverli le combinazioni di tasti da eseguire sono <b>Ctrl+K</b> e <b>Ctrl+U</b> oppure <b>Command+K</b> e <b>Command+U</b>.
+                <br/>
+                Le combinazioni di tasti possono essere modificate in app, il procedimento è il seguente:
+                <br/>
+                File > Preferenze > Scorciatoie da tastiera
+                <br/>
+                o più semplicemente utilizzando la combinazione di tasti predefinita <b>Ctrl+K</b> e <b>Ctrl+S</b> oppure <b>Command+K</b> e <b>Command+S</b>.
+            </p>
+            <!-- percorsi -->
+            <h3>
+                I percorsi
+            </h3>
+            <p>
+                In HTML, ma come in un qualsiasi linguaggio, sono di fondamentale importanza i <b>percorsi</b>. Il percorso indica l'origine del file e può essere di due tipi: 
+                <b>assoluto</b> o <b>relativo</b>.
+                <br/>
+                I due si distinguono poiché il percorso relativo prende come punto di partenza <b>l'unità logica</b> del computer, mentre il percorso relativo, come suggerisce anche il nome, 
+                prende come punto d'inizio la directory all'interno della quale si trova l'utente.
+                <br/>
+                Il percorso assoluto è sconsigliato poiché ciascun utilizzatore di un pc ha un'impostazione diversa delle directory, il che renderebbe impossibile la corretta associazione al file. 
+                Per ovviare a questo problema si utilizza il percorso relativo, che presenta sostanzialmente due comandi:
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        ./
+                    </td>
+                    <td>
+                        Visualizza il contenuto della directory corrente (quella dove si trova il file aperto dall'utente).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ../
+                    </td>
+                    <td>
+                        Risale di una directory.
+                        <br/>
+                        Se ad esempio ci fosse la directory "Indirizzi" con la sottodirectory "Casa" all'interno della quale si trova l'utente, 
+                        utilizzando<span style="color: rgb(3, 87, 116)">../</span>si risalirebbe alla directory "Indirizzi".
+                    </td>
+                </tr>
+            </table>
+            <p>
+                In entrambi i casi i nomi delle directory e dei file sono sempre separati da uno slash (/) senza lo spazio.
+            </p>
+            <div class="board">
+                ./Registro/Indirizzi/Casa/IndirizzoCasa.txt
+            </div>
+            <p class="esempio">
+                Se l'utente si trova all'interno della directory che contiene la directory "Registro"
+            </p>
+            <p>
+                Oppure
+            </p>
+            <div class="board" style="width: 50%">
+                C:/Users/NomeUtente/Documenti/Registro/Indirizzi/Casa/IndirizzoCasa.txt
+            </div>
+        </div>
+        <!--bottoni navigazione-->
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../../index.html" title="Ritorna alla Home">&lt; Ritorna alla Home</a>
+            </div>
+            <div class="nav-button">
+                <a href="../html-pages/html-page-1.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div>
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>
+</html>

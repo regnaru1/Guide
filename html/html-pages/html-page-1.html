@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina della guida dedicata a HTML ver. 5">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!--collegamento del file js-->
+    <!-- <script src=""></script> -->
+    <!--impostazione del titolo e icona-->
+    <title>HTML 5 - Impostazione del foglio di lavoro</title>
+    <link rel="website icon" type="png" href="../../images/icons/html.png">
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                <a href="../html-pages/html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="../css-pages/css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>HTML ver. 5</h1>
+            <!-- progress bar -->
+            <div style="display: flex">
+                <progress value="25" max="100"></progress>
+            </div>
+            <h2>L'impostazione del foglio di lavoro</h2>
+            <!-- doctype -->
+            <p>
+                La prima operazione da eseguire è inserire il tag che indica il tipo di documento che abbiamo aperto, che è il seguente:
+            </p>
+            <div class="board">
+                <span class="open-tag">&lt</span>
+                !DOCTYPE html
+                <span class="close-tag">&gt</span>
+            </div>
+            <!-- tag html -->
+            <p>Immediatamente segue il tag</p>
+            <div class="board">
+                <span class="open-tag">&lt</span>
+                html
+                <span class="close-tag">&gt</span>
+                <span class="open-tag">&lt</span>
+                /html
+                <span class="close-tag">&gt</span>
+            </div>
+            <p>
+                che al suo interno delimita il contenuto del documento HTML. Al suo interno viene inserito l'attributo lang per la definizione della lingua.
+                
+            </p>
+
+            <div class="board">
+                <span class="open-tag">&lthtml</span>
+                lang="it"
+                <span class="close-tag">&gt</span>
+            </div>
+            <p class="esempio">
+                Dichiarazione della lingua italiana come lingua adottata all'interno del documento.
+            </p>
+            <h3>Head e Body</h3>
+            <p>
+                <!-- head e body -->
+                Il documento HTML viene suddiviso in due parti: <b>l'intestazione</b> e il <b>corpo</b>; questa divisione 
+                viene effettuata utilizzando due tag appositi. Questa suddivisione serve per definire il contenuto della pagina web: 
+                all'interno dell'intestazione vengono inserite le informazioni sulla pagina necessarie al browser e al motore di ricerca, ma non 
+                necessarie per l'utente, quindi vengono effettuate in maniera trasparente all'utente. Il corpo della pagina contiene invece le informazioni 
+                che appariranno a video all'utente finale.
+                <br/>
+                Per l'intestazione si usa il tag head:
+            </p>
+            <div class="board">
+                <span class="open-tag">&lt</span>
+                head
+                <span class="close-tag">&gt</span>
+                <span class="open-tag">&lt</span>
+                /head
+                <span class="close-tag">&gt</span>
+            </div>
+            <p>
+                mentre per il corpo si usa il tag body:
+            </p>
+            <div class="board">
+                <span class="open-tag">&lt</span>
+                body
+                <span class="close-tag">&gt</span>
+                <span class="open-tag">&lt</span>
+                /body
+                <span class="close-tag">&gt</span>
+            </div>
+            <h3>Metadata</h3>
+            <p>
+                <!-- metadata -->
+                All'interno del tag head vanno inclusi i <b>metadata</b>, che non sono altro che informazioni sul 
+                contenuto della pagina, come l'autore, la lingua, le parole chiave, una descrizione della pagina e il formato di caratteri utilizzato.
+                <br/>
+                Questi metadata si scrivono inserendo gli attributi all'interno del tag. Si usa l'attributo name che può avere diversi valori, a seconda di 
+                cosa si vuole indicare, ad esempio <b>description</b> per la descrizione, <b>keywords</b> per le parole chiave e <b>author</b> per l'autore.
+            </p>
+            <p class="esempio">
+                Esempio applicato alla descrizione del sito:
+            </p>
+            <div class="board" style="width: 25%">
+                <span class="open-tag">&ltmeta</span>
+                name="description" content="descrizione"
+                <span class="close-tag">/&gt</span>
+            </div>
+            <p class="esempio">
+                dove "descrizione" indica le caratteristiche che voglio descrivere.
+            </p>
+            <p>
+                Per dichiarare invece la codifica della pagina, ovvero l'insieme dei caratteri utilizzati, 
+                si utilizza il seguente codice, ma vale esclusivamente su HTML 5.
+            </p>
+            <div class="board">
+                <span class="open-tag">&ltmeta</span>
+                charset="UTF-8"
+                <span class="close-tag">/&gt</span>
+            </div>
+            <p>
+                Se l'editor di testo che si sta utilizzando è <b>Visual Studio Code</b>, la faccenda è ancor più semplice, 
+                perché digitando su un documento vuoto (che deve avere .html come estensione) html:5 e premendo invio sulla tastiera, 
+                verrà creato un modello di documento contenente quasi tutti i tag visti in precedenza, che possono liberamente essere modificati.
+            </p>
+            <h3>Titolo della scheda</h3>
+            <p>
+                All'interno dell'intestazione si può modificare il titolo della pagina, quello che viene visualizzato in alto sulla scheda del browser. 
+                Questo è possibile inserendo il seguente codice:
+            </p>
+            <div class="board">
+                <span class="open-tag">&lttitle&gt</span>
+                titolo
+                <span class="close-tag">&lt/title&gt</span>
+            </div>
+            <p class="esempio">
+                dove al posto di "titolo" inserisco il nome che voglio dare alla pagina.
+            </p>
+            <h3>Icona della scheda</h3>
+            <p>
+                Per modificare l'icona che appare vicino al titolo bisogna importare l'immagine, specificandone il tipo, 
+                utilizzando il tag link, come nell'esempio sottostante.
+            </p>
+            <div class="board" style="width: 40%">
+                <span class="open-tag">&ltlink</span>
+                rel="website icon" type="formato immagine" href="percorso immagine"
+                <span class="close-tag">/&gt</span>
+            </div>
+            <p class="esempio" style="width: 35%">
+                dove come valore dell'attributo type va inserito il formato dell'immagine (deducibile dall'estensione) e 
+                come valore dell'attributo href il percorso (meglio se relativo) dell'imamgine che si vuole utilizzare.
+            </p>
+            <p>
+                Se si utilizza <b>Visual Studio Code</b>, è sufficiente digitare link, premere invio e sostituire "stylesheet" 
+                con "website icon" e aggiungere l'attributo type.
+            </p>
+        </div>
+        <!--bottoni navigazione-->
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../html-pages/html-page.html" title="Ritorna alla pagina precedente">&lt; Ritorna alla pagina precedente</a>
+            </div>
+            <div class="nav-button">
+                <a href="../html-pages/html-page-2.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div>
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>
+</html>

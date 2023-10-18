@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina della guida dedicata a HTML ver. 5">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!--collegamento del file js-->
+    <!-- <script src=""></script> -->
+    <!--impostazione del titolo e icona-->
+    <title>HTML 5 - Interazione con l'utente</title>
+    <link rel="website icon" type="png" href="../../images/icons/html.png">
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                <a href="./html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="../css-pages/css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>HTML ver. 5</h1>
+            <!-- progress bar -->
+            <div style="display: flex">
+                <progress value="100" max="100"></progress>
+            </div>
+            <h2>I form</h2>
+            <p>
+                I form sono un mezzo mediante i quali è possibile interfacciarsi con l'utente, richiedendogli di inserire dei dati che 
+                possono essere sotto forma di testo, di numero o anche una e-mail o una data.
+                <br/>
+                In HTML i form vengono delimitati mediante il tag form, come nell'esempio seguente
+            </p>
+
+            <div class="board" style="width: 60%">
+                <span class="open-tag">&ltform&gt</span>
+                <span class="close-tag">&lt/form&gt</span>
+            </div>
+            <p class="esempio">
+                Esempio di form per l'inserimento di nome e cognome:
+            </p>
+            <div class="board" style="width: 60%; text-align: left;">
+                <span class="open-tag">&ltform</span>
+                action="URL-script" method="post"
+                <span class="close-tag">&gt</span>
+                <br/>
+                NOME <span class="open-tag">&ltinput</span>
+                type="text" name="nomepersona" size="25" <span class="open-tag">&ltbr/&gt</span>
+                <br/>
+                COGNOME <span class="open-tag">&ltinput</span>
+                type="text" name="cognomepersona" size="30" <span class="open-tag">&ltbr/&gt</span>
+                <br/>
+                <span class="open-tag">&ltinput</span>
+                type="submit" name="invia" value="Invia"
+                <span class="close-tag">&gt</span>
+                <br/>
+                <span class="open-tag">&ltinput</span>
+                type="reset" name="annulla" value="Cancella i dati"
+                <span class="close-tag">&gt</span>
+                <br/>
+                <span class="close-tag">&lt/form&gt</span>
+            </div>
+            <div style="margin: 10px auto; width: 30%; border: 2px solid #000000; padding: 5px;">
+                <form action="URL-script" method="post">
+                    NOME <input type="text" name="nomepersona" size="25"><br/>
+                    COGNOME <input type="text" name="cognomepersona" size="30"><br/>
+                    <input type="submit" name="invia" value="Invia">
+                    <input type="reset" name="annulla" value="Cancella i dati">
+                </form>
+            </div>
+            <hr/>
+            <!-- input -->
+            <h3>Tag input</h3>
+            <p>
+                Il tag input presenta l'attributo type a cui possono essere inseriti molteplici valori, ciascuno dei quali attribuisce un 
+                determinato comportamento alla casella di input.
+            </p>
+            <table style="width: 60%; text-align: center;">
+                <tr>
+                    <th>
+                        Value dell'attributo type
+                    </th>
+                    <th>
+                        Comportamento
+                    </th>
+                    <th>
+                        Aspetto
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        text
+                    </td>
+                    <td>
+                        Crea una casella di testo con un numero limitato di caratteri che è possibile inserire.
+                        <br/>
+                        La proprietà required indica che la compilazione del campo è obbligatoria.
+                    </td>
+                    <td>
+                        <input type="text" style="width: 95%">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        password
+                    </td>
+                    <td>
+                        Come nel caso di text crea una casella di testo con un numero limitato di caratteri che è possibile inserire, i quali saranno sostituiti da pallini o asterischi.
+                        <br/>
+                        La proprietà required indica che la compilazione del campo è obbligatoria.
+                    </td>
+                    <td>
+                        <input type="password" style="width: 95%" name="psw" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        hidden
+                    </td>
+                    <td>
+                        Crea un campo che non viene visualizzato che viene utilizzato per inviare informazioni al server in maniera trasparente all'utente.
+                    </td>
+                    <td>
+                        <input type="hidden" style="width: 95%">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        button
+                    </td>
+                    <td>
+                        Crea un pulsante cliccabile che, a differenza del tag button, non permette l'inserimento di testo o immagini.
+                        <br/>
+                        Il testo che compare sul pulsante viene definito con l'attributo value.
+                    </td>
+                    <td>
+                        <input type="button" value="pulsante">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        radio
+                    </td>
+                    <td>
+                        Crea un pulsante che rende possibile più scelte, anche se i pulsanti appartengano 
+                        tutti allo stesso gruppo.
+                        <br/>
+                        La proprietà checked indica che l'opzione selezionata è la predefinita.
+                    </td>
+                    <td>
+                        <input type="radio" name="prova">Opzione 1
+                        <br/>
+                        <input type="radio" name="prova">Opzione 2
+                        <br/>
+                        <input type="radio" name="prova" checked>Opzione 3
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        checkbox
+                    </td>
+                    <td>
+                        Crea un pulsante che rende possibile una sola scelta, a patto che i pulsanti appartengano 
+                        tutti allo stesso gruppo, che viene impostato inserendo nell'attributo name il valore sia lo stesso.
+                        <br/>
+                        La proprietà checked indica che l'opzione selezionata è la predefinita.
+                    </td>
+                    <td>
+                        <input type="checkbox" name="prova">Opzione 1
+                        <br/>
+                        <input type="checkbox" name="prova" checked>Opzione 2
+                        <br/>
+                        <input type="checkbox" name="prova">Opzione 3
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        email
+                    </td>
+                    <td>
+                        Come nel caso di text crea una casella di testo con un numero limitato di caratteri che è possibile inserire, che devono per forza formare un indirizzo email (indirizzo@dominio.com).
+                        <br/>
+                        La proprietà required indica che la compilazione del campo è obbligatoria.
+                    </td>
+                    <td>
+                        <input type="email" style="width: 95%" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        url
+                    </td>
+                    <td>
+                        Come nel caso di text crea una casella di testo con un numero limitato di caratteri che è possibile inserire, che devono per forza formare un indirizzo URL.
+                        <br/>
+                        La proprietà required indica che la compilazione del campo è obbligatoria.
+                    </td>
+                    <td>
+                        <input type="url" style="width: 95%">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        tel
+                    </td>
+                    <td>
+                        Crea una casella di testo all'interno del quale è possibile inserire esclusivamente delle cifre.
+                        <br/>
+                        Sui dispositivi mobili apre il tastierino numerico.
+                        <br/>
+                        La proprietà required indica che la compilazione del campo è obbligatoria.
+                    </td>
+                    <td>
+                        <input type="tel" style="width: 95%">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        date
+                    </td>
+                    <td>
+                        Crea una casella all'interno della quale deve essere inserita una data. A seconda del browser può essere visualizzato un calendario per l'inserimento della data.
+                        <br/>
+                        La proprietà required indica che la compilazione del campo è obbligatoria.
+                    </td>
+                    <td>
+                        <input type="date" style="width: 60%">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        range
+                    </td>
+                    <td>
+                        Crea un selettore (slider) che permette di impostare un valore compreso in un intervallo.
+                        <br/>
+                        L'attributo min indica il valore minimo, mentre l'attributo max il valore massimo che è possibile impostare.
+                        <br/>
+                        L'attributo value indica il valore predefinito a cui è impostato lo slider e l'attributo step la distanza che intercorre tra un punto e l'altro muovendo lo slider.
+                        <br/>
+                        La proprietà required indica che la compilazione del campo è obbligatoria.
+                    </td>
+                    <td>
+                        <input type="range" style="width: 80%" max="100" min="0" step="5" value="75">Volume
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <!-- button -->
+            <h3>Tag button</h3>
+            <p>
+                Il tag button presenta anch'esso un attributo type, al quale può essere impostato come value un valore che produce un comportamento predefinito.
+                <br/>
+                Il tag button è un pulsante <b>già programmato</b>, mentre il tag input con il valore button nell'attributo type permette al programamtore di modificarne il comportamento. 
+                <br/>
+                Due dei valori che possono essere inseriti nell'attributo type sono<span style="color: #FFFFFF">submit</span>(il pulsante invia i dati inseriti al server) e<span style="color: #FFFFFF">reset</span>(il pulsante svuota il contenuto dei campi).
+            </p>
+            <hr/>
+            <!-- textarea -->
+            <h3>Tag textarea</h3>
+            <p>
+                Il tag textarea permette di creare una casella di testo con un maggior numero di caratteri che è possibile inserire. 
+                La textarea è composta da righe (rows) e colonne (cols).
+                <br/>
+                Per definire il numero di righe e colonne si usano gli attributi<span style="color: #FFFFFF">rows="numero"</span>e<span style="color: #FFFFFF">cols="numero"</span>.
+            </p>
+            <div class="board" style="width: 70%">
+                <span class="open-tag">&lttextarea</span>
+                name="richiesta" rows="10" cols="40" placeholder="scrivi qui la tua domanda"
+                <span class="close-tag">&gt</span>
+                <span class="close-tag">&lt/textarea&gt</span>
+            </div>
+            <p class="esempio">
+                Realizzando la textarea con i parametri inseriti in precedenza il risultato è il seguente:
+            </p>  
+            <textarea name="richiesta" rows="10" cols="40" placeholder="scrivi qui la tua domanda">scrivi qui la tua domanda</textarea>
+            <hr/>
+            <h3>Tag select</h3>
+            <p>
+                Crea una casella combinata che permette di effettuare una scelta a partire dalle voci presenti in un elenco. 
+                All'interno del tag select, che è richiudibile, è presente il tag option, anch'esso richiudibile, ognuno per ogni voce della lista.
+            </p>
+            <p class="esempio">
+                Esempio di casella combinata
+            </p>
+            <form>
+                <label for="regione">In che parte dell'Italia vivi?</label>
+                <select name="regione">
+                    <option value="1" selected>nord</option>
+                    <option value="2">centro</option>
+                    <option value="3">sud e isole</option>
+                </select>
+            </form>
+            <p class="esempio">
+                Il codice per realizzarla è il seguente:
+            </p>
+            <div class="board" style="width: 60%; text-align: left;">
+                <span class="open-tag">&ltform&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&ltlabel</span>
+                for="regione"
+                <span class="close-tag">&gt</span>
+                In che parte dell'Italia vivi?
+                <span class="close-tag">&ltlabel&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&ltselect</span>
+                name="regione"
+                <span class="close-tag">&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&ltoption</span>
+                value="1" selected
+                <span class="close-tag">&gt</span>
+                nord
+                <span class="close-tag">&lt/option&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&ltoption</span>
+                value="2" selected
+                <span class="close-tag">&gt</span>
+                centro
+                <span class="close-tag">&lt/option&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 10%">&ltoption</span>
+                value="3" selected
+                <span class="close-tag">&gt</span>
+                sud e isole
+                <span class="close-tag">&lt/option&gt</span>
+                <br/>
+                <span class="open-tag" style="padding-left: 5%">&lt/select&gt</span>
+                <br/>
+                <span class="open-tag">&lt/form&gt</span>
+            </div>
+            <p>
+                Per permettere di effettuare scelte multiple all'interno di un menù a tendina, e renderlo di fatto una lista di 
+                selezione multipla, occorre inserire la proprietà<span style="color: #FFFFFF">multiple</span>all'interno del tag di apertura select.
+            </p>
+            <hr/>
+            <h3>
+                Il tag label
+            </h3>
+            <p>
+                Il tag label permette di inserire un'etichetta prima di un altro tag inserito in un form.
+                <br/>
+                La struttura è la seguente:
+            </p>
+            <div class="board" style="width: 45%">
+                <span class="open-tag" style="padding-left: 5%">&ltlabel</span>
+                for="regione"
+                <span class="close-tag">&gt</span>
+                In che parte dell'Italia vivi?
+                <span class="close-tag">&ltlabel&gt</span>
+            </div>
+            <p>
+                Dove, come valore dell'attributo for, va inserito lo stesso valore che è stato inserito nell'attributo name del tag, 
+                questo serve esclusivamente al server per l'acquisizione dei dati.
+            </p>
+        </div>
+        <!--bottoni navigazione-->
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../html-pages/html-page-6.html" title="Ritorna alla pagina precedente">&lt; Ritorna alla pagina precedente</a>
+            </div>
+            <!-- <div class="nav-button">
+                <a href="../html-pages/html-page-8.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div> -->
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>
+</html>

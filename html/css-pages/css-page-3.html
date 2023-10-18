@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--inclusione dei metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guida alla creazione di un sito web utilizzando il linguaggio HTML 5 e CSS 3">
+    <meta name="author" content="Garello Matteo">
+    <!--collegamento dei file CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!--collegamento del file JS-->
+    <script src=""></script>
+    <!--impostazione del titolo e icona-->
+    <title>CSS 3 - Contenitori</title>
+    <link rel="website icon" type="png" href="../../images/icons/css.png">
+</head>
+<body>
+    <!--div contenente tutto il sito-->
+    <div id="container">
+        <div id="navbar">
+            <div id="labels">
+                <div class="option">
+                    <a href="../../index.html" title="Introduzione">HOME</a>
+                </div>
+                <div class="option">
+                    <a href="../html-pages/html-page.html" title="Guida a HTML">HTML</a> 
+                </div>
+                <div class="option">
+                    <a href="./css-page.html" title="Guida a CSS">CSS</a>
+                </div>
+            </div>
+        </div>
+        <div id="guida">
+            <h1>CSS ver. 3</h1>
+            <div style="display: flex">
+                <progress value="80" max="100"></progress>
+            </div>
+            <h2>I contenitori</h2>
+            <p>
+                In HTML si possono creare dei contenitori che possono contenere testo, immagini, testo e immagini, altri contenitori...
+                <br/>
+                Questi contenitori si dividono in due famiglie:<span><b>block</b></span>e<span><b>inline</b></span>.
+                <br/>
+                I contenitori<span>block</span>vengono "disegnati" uno sotto l'altro; il contenitore block è rappresentato dal tag richiudibile<span>div</span>.
+                <br/>
+                I contenitori<span>inline</span>vengono "disegnati" uno di fianco all'altro; il contenitore inline è rappresentato dal tag richiudibile<span>span</span>.
+            </p>
+            <div id="image-container">
+                <img src="../../images/css-box-model.png" alt="Modello di contenitore CSS" id="model-container">
+                <p class="esempio" style="width: 70%">
+                    Struttura di un contenitore in CSS
+                </p>
+            </div>
+            <h3>
+                Il contenitore div
+            </h3>
+            <ul>
+                <li>È un contenitore di tipo<span>block</span>;</li>
+                <li>La sua altezza equivale all'<span>altezza del testo</span>e lo sfondo non incide;</li>
+                <li>La sua larghezza equivale al<span>100% della larghezza del contenitore padre</span>;</li>
+                <li>È formato da margin, border e padding su tutti i lati (top, right, bottom, left) e il content al centro (le sue dimensioni vengono modificate da width e height)</li>
+            </ul>
+            <p>
+                È possibile trasformare un div da block a inline seguendo questa semplice procedura, che richiedere che il div che voglio trasformare 
+                in inline sia contenuto all'interno di un altro div. Il div, essendo un contenitore, può essere reso inline per 
+                modificare l'orientamento del testo.
+                <br/>
+                Modificare la regola del contenitore padre inserendo<span>display: flex;</span>che rende il contenitore a cui 
+                è applicato flexbox, ovvero il suo contenuto viene sempre visualizzato inline.
+            </p>
+            <h3>
+                Il contenitore span
+            </h3>
+            <ul>
+                <li>È un contenitore di tipo<span>inline</span>, il che lo rende privo di altezza e di larghezza;</li>
+                <li>È formato da margin, border e padding su tutti i lati (top, right, bottom, left) e il content al centro (le sue dimensioni vengono modificate da width e height)</li>
+            </ul>
+            
+        </div>
+        <div id="nav-buttons">
+            <div class="nav-button">
+                <a href="../css-pages/css-page-2.html" title="Ritorna alla pagina precedente">&lt; Ritorna alla pagina precedente</a>
+            </div>
+            <div class="nav-button">
+                <a href="../css-pages/css-page-4.html" title="Vai alla pagina successiva">Vai alla pagina successiva &gt</a>
+            </div>
+        </div>
+        <div class="ringraziamenti">
+            Il sito è stato realizzato da Matteo Garello, 3C ITIS.
+            <br/>
+            <a href="#model-container">L'immagine</a> è stata prelevata dal sito <a href="https://www.tutorialrepublic.com/css-tutorial/css-box-model.php" title="tutorialrepublic.com" target="new">tutorialrepublic.com</a>
+        </div>
+        <div class="ringraziamenti">
+            &copy
+            <script src="../../js/year.js" type="text/javascript"></script>
+        </div>
+    </div>
+</body>
